@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\LightedBumpedOutline.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\Shadowed.shader">
     <Files>
-      <File FileName="Assets\Shaders\LightedBumpedOutline.shader" Line="31" Column="24" />
+      <File FileName="Assets\Shaders\Shadowed.shader" Line="65" Column="2" />
+      <File FileName="Assets\Shaders\LightedBumpedOutline.shader" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Monster.cs" Line="1" Column="1" />
       <File FileName="Assets\OVR\Scripts\OVRCameraRig.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="1" />

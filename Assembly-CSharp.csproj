@@ -105,12 +105,15 @@
      <None Include="Assets\Shaders\LightedBumpedOutline.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-Lightmap-Unlit-VirtualVertexGlossy-Add.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-Lightmap-Unlit-Wind.shader" />
+     <None Include="Assets\Shaders\Shadowed.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-billboarded-blinking-god-rays.shader" />
      <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Particles Additive Culled.shader" />
+     <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\TSF\Shaders\TSF.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-lightprobe-VirtualVertexGlossy-Add.shader" />
      <None Include="Assets\Workshop\Shaders\Mobile Vertex Colored.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
