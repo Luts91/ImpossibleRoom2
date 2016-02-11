@@ -59,6 +59,7 @@
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-blinking-god-rays.shader" />
      <None Include="Assets\Workshop\SamsungDisclaimer.txt" />
      <None Include="Assets\ShadowGunShaders\Shaders\Particle Alpha Blend.shader" />
+     <None Include="Assets\Shaders\LightedBumpedOutline.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-Lightmap-Unlit-VirtualVertexGlossy-Add.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-Lightmap-Unlit-Wind.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />

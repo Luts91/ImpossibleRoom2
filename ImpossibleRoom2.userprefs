@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Monster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\LightedBumpedOutline.shader">
     <Files>
-      <File FileName="Assets\Scripts\Monster.cs" Line="44" Column="1" />
+      <File FileName="Assets\Shaders\LightedBumpedOutline.shader" Line="31" Column="24" />
+      <File FileName="Assets\Scripts\Monster.cs" Line="1" Column="1" />
       <File FileName="Assets\OVR\Scripts\OVRCameraRig.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Controller.cs" Line="64" Column="6" />
-      <File FileName="Assets\Scripts\SmoothMove.cs" Line="13" Column="36" />
-      <File FileName="Assets\Workshop\Scripts\TextureLoader.cs" Line="116" Column="3" />
+      <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SmoothMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Workshop\Scripts\TextureLoader.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
