@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Controller : MonoBehaviour {
 	public MeshRenderer mat;
 	public Transform cam;
-	public Monster monster;
+	public List<Monster> monsters=new List<Monster>();
 
 	// Use this for initialization
 	void Start () {
@@ -63,7 +64,7 @@ public class Controller : MonoBehaviour {
 				angle = new Vector3 (270, 0, 90);
 			//Debug.Log (hit.normal.x+","+hit.normal.y+","+hit.normal.z + " " + angle);
 
-			Instantiate (monster, hit.point-forward*0.1f, Quaternion.Euler(angle));
+			Instantiate (monsters[Random.Range(0,monsters.Count)], hit.point-forward*0.1f, Quaternion.Euler(angle));
 		}
 	}
 
