@@ -58,7 +58,6 @@
      <Compile Include="Assets\OVR\Moonlight\Editor\OVRMoonlightLoader.cs" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-weapon.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-cube-env.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Workshop\Shaders\Mobile Transparent Vertex Color No Main Tex.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders 2.0\Include\TCP2_Outline_SM2.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders 2.0\TCP2_OutlineOnly Blended.shader" />
@@ -80,7 +79,6 @@
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-Lightmap-Unlit-VirtualVertexGlossy-Add.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-Lightmap-Unlit-Wind.shader" />
      <None Include="Assets\Shaders\Shadowed.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders 2.0\Variants Base\TCP2_Mobile_Outline.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-billboarded-blinking-god-rays.shader" />
@@ -96,9 +94,7 @@
      <None Include="Assets\TSF\Shaders\TSF.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-lightprobe-VirtualVertexGlossy-Add.shader" />
      <None Include="Assets\Workshop\Shaders\Mobile Vertex Colored.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-skybox.shader" />
-     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
      <None Include="Assets\ShadowGunShaders\Shaders\Environment\MADFINGER-skybox-transparent.shader" />
      <None Include="Assets\Workshop\Shaders\Mobile Vertex Colored No Main Tex.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders 2.0\Variants Base\TCP2_Desktop_OutlineBlending.shader" />
