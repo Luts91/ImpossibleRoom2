@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Controller : MonoBehaviour {
 	public MeshRenderer mat;
 	public Transform cam;
+	public GameObject selectionPlane;
 	public List<Monster> monsters=new List<Monster>();
 
 	// Use this for initialization
@@ -50,15 +51,15 @@ public class Controller : MonoBehaviour {
 		Ray castedRay = new Ray (Vector3.zero, forward);
 		if(Physics.Raycast(castedRay, out hit)) {
 			Vector3 angle=new Vector3 (90, 180, 180);
-			if (hit.normal.z < -1)
+			if (hit.normal.z < -0.1)
 				angle = new Vector3 (-90, 0, 0);
 			if (hit.normal.z > 0.1)
 				angle = new Vector3 (90, 180, 180);
-			if (hit.normal.y == 1)
+			if (hit.normal.y >0.1)
 				angle = new Vector3 (0, 0, 0);
-			if (hit.normal.y == -1)
+			if (hit.normal.y < -0.1)
 				angle = new Vector3 (180, 0, 0);
-			if (hit.normal.x == 1)
+			if (hit.normal.x > 0.1)
 				angle = new Vector3 (90, 0, -90);
 			if (hit.normal.x <-0.1)
 				angle = new Vector3 (270, 0, 90);
@@ -78,7 +79,29 @@ public class Controller : MonoBehaviour {
 
 		Ray castedRay = new Ray (Vector3.zero, forward);
 		if(Physics.Raycast(castedRay, out hit)) {
-			Reticle.getInstance ().transform.localPosition = new Vector3 (0, 0, hit.point.magnitude-0.1f);
+			Reticle.getInstance ().transform.localPosition = new Vector3 (0, 0, hit.point.magnitude-0.1f);	
+
+			SmoothMove sm = hit.collider.GetComponent<SmoothMove> ();
+			if (sm) {
+				selectionPlane.SetActive (true);
+				selectionPlane.transform.position = hit.collider.transform.position+hit.normal*0.51f;
+				Vector3 angle=new Vector3 (90, 180, 180);
+				if (hit.normal.z < -0.1)
+					angle = new Vector3 (-90, 0, 0);
+				if (hit.normal.z > 0.1)
+					angle = new Vector3 (90, 180, 180);
+				if (hit.normal.y > 0.1)
+					angle = new Vector3 (0, 0, 0);
+				if (hit.normal.y < -0.1)
+					angle = new Vector3 (180, 0, 0);
+				if (hit.normal.x > 0.1)
+					angle = new Vector3 (90, 0, -90);
+				if (hit.normal.x <-0.1)
+					angle = new Vector3 (270, 0, 90);
+				selectionPlane.transform.rotation = Quaternion.Euler (angle);
+			} else {
+				selectionPlane.SetActive (false);
+			}
 		}
 	}
 }

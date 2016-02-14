@@ -8,6 +8,7 @@ public class SmoothMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		target = transform.position;
+
 	}
 	
 	// Update is called once per frame
