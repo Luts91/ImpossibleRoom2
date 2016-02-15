@@ -6360,6 +6360,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 144.0662
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
+      propertyPath: textureSize
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabParent: 0
@@ -6687,7 +6691,7 @@ Prefab:
     - target: {fileID: 2379840, guid: ca51e5b9ddda0354d89ae09a78177316, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a4861448427aaa1438799b7e8be47e40, type: 2}
+      objectReference: {fileID: 2100000, guid: 3b5b47be5c4ff9146971b1afa7e0a321, type: 2}
     - target: {fileID: 3371380, guid: ca51e5b9ddda0354d89ae09a78177316, type: 2}
       propertyPath: m_Mesh
       value: 
