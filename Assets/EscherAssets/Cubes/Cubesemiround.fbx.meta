@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3b18c9ce046c1c147b6f32e4d5ed9afe
-timeCreated: 1455216526
+timeCreated: 1455487248
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: semiroundCube
   materials:
     importMaterials: 1
     materialName: 0

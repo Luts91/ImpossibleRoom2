@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: toon
-  m_Shader: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3b0201eb98cad3f4087593033de9d718, type: 3}
   m_ShaderKeywords: OUTLINES TCP2_BUMP TCP2_COLORS_AS_NORMALS TCP2_RIM TCP2_SPEC
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -32,20 +32,6 @@ Material:
       data:
         first:
           name: _DetailNormalMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Ramp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ToonShade
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -92,6 +78,20 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ToonShade
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -109,38 +109,6 @@ Material:
         first:
           name: _Shininess
         second: 0.09
-      data:
-        first:
-          name: _Outline
-        second: 1.5
-      data:
-        first:
-          name: _RampThreshold
-        second: 0.5
-      data:
-        first:
-          name: _RampSmooth
-        second: 0.1
-      data:
-        first:
-          name: _TexLod
-        second: 5
-      data:
-        first:
-          name: _ZSmooth
-        second: -0.5
-      data:
-        first:
-          name: _Offset1
-        second: 0
-      data:
-        first:
-          name: _Offset2
-        second: 0
-      data:
-        first:
-          name: _SpecSmooth
-        second: 0.05
       data:
         first:
           name: _Parallax
@@ -177,6 +145,46 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Outline
+        second: 1.5
+      data:
+        first:
+          name: _RampThreshold
+        second: 0.5
+      data:
+        first:
+          name: _RampSmooth
+        second: 0.1
+      data:
+        first:
+          name: _TexLod
+        second: 5
+      data:
+        first:
+          name: _ZSmooth
+        second: -0.5
+      data:
+        first:
+          name: _Offset1
+        second: 0
+      data:
+        first:
+          name: _Offset2
+        second: 0
+      data:
+        first:
+          name: _SpecSmooth
+        second: 0.05
+      data:
+        first:
+          name: _RimMin
+        second: 0.636
+      data:
+        first:
+          name: _RimMax
+        second: 1
     m_Colors:
       data:
         first:
@@ -202,3 +210,11 @@ Material:
         first:
           name: _SColor
         second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
+      data:
+        first:
+          name: _RimDir
+        second: {r: 0, g: 0, b: 1, a: 0}
