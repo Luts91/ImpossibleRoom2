@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2B8D5BC2-CF77-1CC8-1E85-2801A76EEA19}</ProjectGuid>
+    <ProjectGuid>{36925B8B-75CF-E5B0-39AB-5D70BA2153D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\FlyAround.cs" />
      <Compile Include="Assets\Scripts\Monster.cs" />
      <Compile Include="Assets\Scripts\SmoothMove.cs" />
+     <Compile Include="Assets\Scripts\StepSound.cs" />
      <Compile Include="Assets\Workshop\Scripts\Anim.cs" />
      <Compile Include="Assets\Workshop\Scripts\AnimAlpha.cs" />
      <Compile Include="Assets\Workshop\Scripts\AnimShaderAlpha.cs" />
@@ -212,7 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{AFA248BE-A620-31B6-B97A-6FBFF5229702}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{CD72E4C6-7AEA-8059-7013-FEC5BAF33B22}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

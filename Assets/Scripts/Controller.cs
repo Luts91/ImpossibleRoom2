@@ -8,6 +8,8 @@ public class Controller : MonoBehaviour {
 	public GameObject selectionPlane;
 	public List<Monster> monsters=new List<Monster>();
 
+	public AudioClip pull,push,click;
+
 	// Use this for initialization
 	void Start () {
 		OVRTouchpad.Create();
@@ -19,16 +21,27 @@ public class Controller : MonoBehaviour {
 	{
 		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
 
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Down || touchArgs.TouchType == OVRTouchpad.TouchEvent.Left)
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Down || touchArgs.TouchType == OVRTouchpad.TouchEvent.Left) {
 			TranslateBox (0.5f);
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Up || touchArgs.TouchType == OVRTouchpad.TouchEvent.Right)
+			PlaySound (pull);
+		}
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Up || touchArgs.TouchType == OVRTouchpad.TouchEvent.Right) {
 			TranslateBox (-0.5f);
+			PlaySound (push);
+		}
 		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
 			CreateMonster ();
 			DeleteIntro();
+			PlaySound (click);
 		}
 
 			
+	}
+
+	void PlaySound(AudioClip s){
+		AudioSource a = Reticle.getInstance ().GetComponent<AudioSource> ();
+		a.clip = s;
+		a.Play ();
 	}
 
 	void TranslateBox(float strength){
