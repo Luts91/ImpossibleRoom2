@@ -19,12 +19,14 @@ public class Controller : MonoBehaviour {
 	{
 		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
 
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Down)
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Down || touchArgs.TouchType == OVRTouchpad.TouchEvent.Left)
 			TranslateBox (0.5f);
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Up)
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Up || touchArgs.TouchType == OVRTouchpad.TouchEvent.Right)
 			TranslateBox (-0.5f);
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap)
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
 			CreateMonster ();
+			DeleteIntro();
+		}
 
 			
 	}
@@ -40,6 +42,26 @@ public class Controller : MonoBehaviour {
 			if (sm) {
 				sm.target = sm.target + hit.normal * strength;
 			}
+		}
+	}
+
+	void DeleteIntro(){
+		RaycastHit hit = new RaycastHit();
+		Vector3 forward = Reticle.getInstance().transform.TransformDirection (Vector3.forward);
+		
+		
+		Ray castedRay = new Ray (Vector3.zero, forward);
+		if(Physics.Raycast(castedRay, out hit)) {
+			DeleteOnClick doc=hit.collider.GetComponent<DeleteOnClick>();
+			if (doc){
+				Destroy(hit.collider.gameObject);
+			}
+
+			FlyAround fa = hit.collider.GetComponent<FlyAround> ();
+			if (fa) {
+				fa.Absturz ();
+			}
+
 		}
 	}
 

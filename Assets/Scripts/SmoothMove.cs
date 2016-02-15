@@ -7,6 +7,9 @@ public class SmoothMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		transform.position = new Vector3 (transform.position.x + Random.value / 1000, transform.position.y + Random.value / 1000, transform.position.z + Random.value / 1000);
+
+
 		target = transform.position;
 
 	}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Monster : MonoBehaviour {
 	public float speed=0.1f;
@@ -8,8 +9,21 @@ public class Monster : MonoBehaviour {
 
 	float dirChange=5;
 
+	public static List<Monster> monsters = new List<Monster> ();
+	public static int maxCount=20;
+
 	// Use this for initialization
 	void Start () {
+
+		monsters.Add (this);
+
+		if (monsters.Count >= maxCount) {
+			Destroy (monsters [0].gameObject);
+			monsters.RemoveAt (0);
+		}
+
+
+
 		int rot = Random.Range (-2, 2);
 		transform.Rotate (new Vector3(0,rot*90,0));
 	}
