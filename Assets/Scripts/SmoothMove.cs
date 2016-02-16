@@ -4,6 +4,7 @@ using System.Collections;
 public class SmoothMove : MonoBehaviour {
 
 	public Vector3 target;
+	public Vector3 startPos;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +13,7 @@ public class SmoothMove : MonoBehaviour {
 
 		target = transform.position;
 
+		startPos = target;
 	}
 	
 	// Update is called once per frame
@@ -24,5 +26,11 @@ public class SmoothMove : MonoBehaviour {
 		} else {
 			transform.position = target;
 		}
+
+
+	}
+
+	public void Restart(){
+		target = startPos;
 	}
 }

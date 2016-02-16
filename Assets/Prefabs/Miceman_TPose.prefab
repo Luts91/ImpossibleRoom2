@@ -856,7 +856,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28078, y: -1.677, z: 0.90187}
+  m_LocalPosition: {x: -0.28078, y: -1.4374, z: 0.90187}
   m_LocalScale: {x: 0.109256506, y: 0.10925673, z: 0.10925673}
   m_Children:
   - {fileID: 430192}
@@ -952,28 +952,28 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 2
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - time: 0.23033708
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -2.0008
+      outSlope: -2.0008
       tangentMode: 0
-    - time: 1
+    - time: 0.98876405
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.5002
+      outSlope: -0.5002
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -989,7 +989,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1117,7 +1117,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 179930}

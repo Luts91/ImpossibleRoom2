@@ -5,6 +5,7 @@ using System.Collections;
 
 
 public class Reticle : SingletonMonoBehaviour<Reticle> {
+	public MeshRenderer mesh;
 
 	private bool isLerping			= false;
 	private float mAnimStartTime 	= 0.0f;
@@ -30,6 +31,9 @@ public class Reticle : SingletonMonoBehaviour<Reticle> {
 	
 	// Update is called once per frame
 	void Update () {
+
+		mesh.material.color = GetComponent<SpriteRenderer> ().color;
+
 		// While the user has clicked we signal the flag to lerp the reticle color.
 		if(mInputManager != null) {
 			if (mInputManager.IsPressed == true) {
@@ -39,6 +43,7 @@ public class Reticle : SingletonMonoBehaviour<Reticle> {
 
 				// Reset the color on clicks before lerping.
 				GetComponent<SpriteRenderer> ().color = StartColor;
+
 				isLerping = true;
 			}
 		}

@@ -138,5 +138,12 @@ public class Controller : MonoBehaviour {
 				selectionPlane.SetActive (false);
 			}
 		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Debug.Log ("Clicked Back Button.");
+			OVRTouchpad.TouchHandler -= HandleTouchHandler;
+			UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene ().name);
+		} // end "Back"
+
 	}
 }
