@@ -21,11 +21,11 @@ public class Controller : MonoBehaviour {
 	{
 		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
 
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Down || touchArgs.TouchType == OVRTouchpad.TouchEvent.Left) {
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Down || touchArgs.TouchType == OVRTouchpad.TouchEvent.Right) {
 			TranslateBox (0.5f);
 			PlaySound (pull);
 		}
-		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Up || touchArgs.TouchType == OVRTouchpad.TouchEvent.Right) {
+		if (touchArgs.TouchType == OVRTouchpad.TouchEvent.Up || touchArgs.TouchType == OVRTouchpad.TouchEvent.Left) {
 			TranslateBox (-0.5f);
 			PlaySound (push);
 		}
@@ -100,7 +100,7 @@ public class Controller : MonoBehaviour {
 				angle = new Vector3 (270, 0, 90);
 			//Debug.Log (hit.normal.x+","+hit.normal.y+","+hit.normal.z + " " + angle);
 
-			Instantiate (monsters[Random.Range(0,monsters.Count)], hit.point-forward*0.1f, Quaternion.Euler(angle));
+			Instantiate (monsters[Random.Range(0,monsters.Count)], hit.point-forward*0.01f, Quaternion.Euler(angle));
 		}
 	}
 

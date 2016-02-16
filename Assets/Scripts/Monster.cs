@@ -43,13 +43,13 @@ public class Monster : MonoBehaviour {
 		transform.Translate (Vector3.forward*Time.deltaTime*speed);
 
 		RaycastHit hit;
-		if (Physics.Raycast (transform.position, transform.forward, 0.1f)) {
+		if (Physics.Raycast (transform.position, transform.forward, 0.01f)) {
 			transform.Rotate (new Vector3 (-90, 0));
-		}else if (coolDown<=0 && !Physics.Raycast (transform.position+transform.up*0.1f, -transform.up,0.21f)) {
+		}else if (coolDown<=0 && !Physics.Raycast (transform.position, -transform.up,0.21f)) {
 			transform.Translate (-Vector3.up * 0.1f);
 		}else if (coolDown<=0 && !Physics.Raycast (transform.position+transform.forward*0.1f, -transform.up, 0.2f)) {
 			coolDown = 2;
-			transform.Translate (Vector3.forward * 0.2f);
+			transform.Translate (Vector3.forward * 0.11f);
 			transform.Rotate (new Vector3 (90, 0));
 		}
 
