@@ -18,7 +18,8 @@ public class Monster : MonoBehaviour {
 		monsters.Add (this);
 
 		if (monsters.Count >= maxCount) {
-			Destroy (monsters [0].gameObject);
+			if (monsters [0] != null)
+				Destroy (monsters [0].gameObject);
 			monsters.RemoveAt (0);
 		}
 
@@ -47,9 +48,12 @@ public class Monster : MonoBehaviour {
 			transform.Rotate (new Vector3 (-90, 0));
 		} else if (coolDown <= 0 && !Physics.Raycast (transform.position, -transform.up, 0.01f)) {
 			transform.Translate (-Vector3.up * 0.005f);
-			if (!Physics.Raycast (transform.position, -transform.up, 0.2f)) {
+			if (Physics.Raycast (transform.position, -transform.up)) {
+				while (!Physics.Raycast (transform.position, -transform.up, 0.01f)) {
+					transform.Translate (-Vector3.up * 0.005f);
+				}
+			}else
 				transform.Translate (-Vector3.up * 0.1f);
-			}
 		}else if (coolDown<=0 && !Physics.Raycast (transform.position+transform.forward*0.1f, -transform.up, 0.2f)) {
 			coolDown = 2;
 			transform.Translate (Vector3.forward * 0.11f);

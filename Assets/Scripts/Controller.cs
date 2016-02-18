@@ -5,13 +5,19 @@ using System.Collections.Generic;
 public class Controller : MonoBehaviour {
 	public MeshRenderer mat;
 	public Transform cam;
+	Quaternion lastRot;
 	public GameObject selectionPlane;
 	public List<Monster> monsters=new List<Monster>();
 
 	public AudioClip pull,push,click;
 
+	public System.DateTime pauseTime;
+
+
 	// Use this for initialization
 	void Start () {
+		lastRot = cam.rotation;
+
 		OVRTouchpad.Create();
 		OVRTouchpad.TouchHandler += HandleTouchHandler;
 
@@ -138,12 +144,31 @@ public class Controller : MonoBehaviour {
 				selectionPlane.SetActive (false);
 			}
 		}
+	
+		if (!cam.rotation.Equals(lastRot))
+			pauseTime = System.DateTime.Now;
+		lastRot=cam.rotation;
+		if (pauseTime!=default(System.DateTime) && (System.DateTime.Now - pauseTime).Seconds > 5)
+			Restart ();
+	
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Debug.Log ("Clicked Back Button.");
-			OVRTouchpad.TouchHandler -= HandleTouchHandler;
-			UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene ().name);
-		} // end "Back"
+			Restart ();
+		}
 
 	}
+
+	void Restart(){
+		OVRTouchpad.TouchHandler -= HandleTouchHandler;
+		UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene ().name);
+	}
+	void OnApplicationPause(bool pause) {
+		if (pause) {
+			pauseTime = System.DateTime.Now;
+		}else{
+			if (pauseTime!=default(System.DateTime) && (System.DateTime.Now - pauseTime).Seconds > 5)
+				Restart ();
+		}	
+	}
+
 }
