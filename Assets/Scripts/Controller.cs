@@ -148,7 +148,7 @@ public class Controller : MonoBehaviour {
 		if (!cam.rotation.Equals(lastRot))
 			pauseTime = System.DateTime.Now;
 		lastRot=cam.rotation;
-		if (pauseTime!=default(System.DateTime) && (System.DateTime.Now - pauseTime).Seconds > 5)
+		if (pauseTime!=default(System.DateTime) && (System.DateTime.Now - pauseTime).Seconds > 1)
 			Restart ();
 	
 
@@ -166,7 +166,7 @@ public class Controller : MonoBehaviour {
 		if (pause) {
 			pauseTime = System.DateTime.Now;
 		}else{
-			if (pauseTime!=default(System.DateTime) && (System.DateTime.Now - pauseTime).Seconds > 5)
+			if (pauseTime!=default(System.DateTime) && (System.DateTime.Now - pauseTime).Seconds > 1)
 				Restart ();
 		}	
 	}
