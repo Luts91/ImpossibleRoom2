@@ -163,6 +163,8 @@ public class Controller : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene (UnityEngine.SceneManagement.SceneManager.GetActiveScene ().name);
 	}
 	void OnApplicationPause(bool pause) {
+		return;
+
 		if (pause) {
 			pauseTime = System.DateTime.Now;
 		}else{
